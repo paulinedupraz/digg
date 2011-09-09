@@ -128,7 +128,8 @@ a:hover, a:active{
 }
 
 .header-band {
-	margin-bottom: 20px;
+	overflow: hidden;
+	padding-bottom: 4px;
 	padding-top: 7px;
 	background: #195695;
 	.btn-primary, 
@@ -203,6 +204,44 @@ a:hover, a:active{
 	}
 }
 
+.main-content-band{
+	background: -webkit-gradient(linear,left top,left 35,from(#E5ECF3),to(white));
+	background: -moz-linear-gradient(top,#E5ECF3,white 35px);
+	padding-top: 10px;
+}
+
+.pre-column{
+	padding-bottom: 2px;
+	border-bottom: 1px solid #CCDCEF;
+	
+	.topic-nav{
+		overflow: hidden;
+		padding-bottom: 10px;
+		border-bottom: 1px solid #CCDCEF;
+		
+		li{
+			margin-right: 10px;
+			overflow: hidden;
+			float: left;
+			a{
+				display: block;
+				float: left;
+				padding: 5px 9px 7px;
+				font-weight: bold;
+				color: #105CB6;
+			}
+		}
+		.active-topic a{
+			background-color: #E3E8F4;
+			border: 1px solid #CCDCEF;
+			.border-radius(15px);
+		}
+	}
+}
+
+.main-content-columns{
+	margin-top: 20px;
+}
 
 
 
