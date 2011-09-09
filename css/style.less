@@ -66,25 +66,7 @@ a:hover, a:active{
     text-decoration: underline;
 }
 
-.btn-primary,
-.btn-primary:link,
-.btn-primary:visited{
-	cursor: pointer;
-	padding: 7px 9px 7px 6px;
-	.border-radius;
-	.linear-gradient(#8EAF53, #799E3C);
-	.text-shadow(#619C33, 0, -1px, 0);
-	border: 1px solid #799E3C;
-	font-weight: bold;
-	color: #fff;
-}
-.btn-primary:hover{
-	text-decoration: none;
-}
 
-.header-band .btn-primary{
-	border: 1px solid #15497F;
-}
 
 
 * {
@@ -95,4 +77,60 @@ a:hover, a:active{
 .hidden{
 	display: none;
 }
+
+.btn-primary,
+.btn-primary:link,
+.btn-primary:visited,
+.btn-secondary:link,
+.btn-secondary:visited{
+	padding: 7px 9px 7px 6px;
+	.border-radius;
+	text-decoration: none;
+	font-weight: bold;
+	color: #fff;
+}
+
+.btn-primary{
+	cursor: pointer;
+	border: 1px solid #799E3C;
+	.linear-gradient(#8EAF53, #799E3C);
+	.text-shadow(#619C33, 0, -1px, 0);
+}
+.btn-primary:hover{
+	text-decoration: none;
+}
+
+.btn-secondary{
+	.linear-gradient(#0066A6, #005991);
+	.text-shadow(#023B83, 0, -1px, 0);
+}
+.btn-secondary:hover{
+	.linear-gradient(#0167a7, #1b84c8);
+}
+
+
+.new-feature-strip{
+	margin-top: 12px;
+	text-align: center;
+	font-weight: bold;
+	.text-shadow(#fff, 0, 1px, 0);
+	a:hover {
+		text-decoration: none;
+	}
+	.btn-primary{
+		margin-left: 10px;
+		padding: 5px;
+	}
+}
+
+.header-band {
+	.btn-primary, 
+	.btn-secondary{
+		border: 1px solid #15497F;
+	}
+}
+
+
+
+
 
