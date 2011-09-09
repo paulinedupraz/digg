@@ -120,7 +120,7 @@
     </div>
 
 
-    <div class="header-band">
+    <div class="header-band clearfix">
         <div class="header-content group">
             <a href="/" class="digg-logo"><img src="images/logo.png" alt="digg" /></a>
             <a href="/submit" class="btn btn-primary btn-submit submit-start has-tooltip"><span class="plus-icon"><span></span></span>Submit Link</a>
@@ -129,14 +129,14 @@
                 <li><a href="/" class="active" id="header-topnews">Top News</a></li>
                 <li><a href="/newswire" id="header-newswire">Newswire</a></li>
             </ul>
-            <form action="/search" method="get" accept-charset="utf-8" id="header-search-form">
-                <input type="text" name="q" id="q" autocomplete="off" placeholder="Search Users or Stories">
-                <button type="submit" name="submit" class="btn btn-primary"><span></span></button>
-            </form>
             <ul class="loggedout-navigation group">
                 <li><a href="/register" id="modal-create-account" class="btn btn-primary btn-submit auth-register">Join Digg!</a></li>
                 <li><a href="/login" id="modal-login" class="btn btn-secondary auth-login">Login</a></li>
             </ul>
+            <form action="/search" method="get" accept-charset="utf-8" id="header-search-form">
+                <input type="text" name="q" id="q" autocomplete="off" placeholder="Search Users or Stories">
+                <button type="submit" name="submit" class="btn btn-primary"><span></span></button>
+            </form>
         </div>
     </div>
     <div class="main-content-band">
