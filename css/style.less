@@ -65,16 +65,33 @@ a:hover, a:active{
     text-decoration: underline;
 }
 
-.btn-primary{
-	border: 1px solid #15497F;
+.btn-primary,
+.btn-primary:link,
+.btn-primary:visited{
+	cursor: pointer;
 	padding: 7px 9px 7px 6px;
+	.border-radius;
+	.linear-gradient(#8EAF53, #799E3C);
+	.text-shadow(#619C33, 0, -1px, 0);
+	border: 1px solid #799E3C;
+	font-weight: bold;
+	color: #fff;
+}
+.btn-primary:hover{
+	text-decoration: none;
 }
 
-
+.header-band .btn-primary{
+	border: 1px solid #15497F;
+}
 
 
 * {
     margin: 0;
     padding: 0
+}
+
+.hidden{
+	display: none;
 }
 
