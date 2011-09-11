@@ -370,4 +370,47 @@ a:hover, a:active{
 	}
 }
 
+.pagination{
+	margin-top: 10px;
+	margin-bottom: 20px;
+	padding: 5px;
+	display: block;
+	background: #EEE;
+	overflow: hidden;
+	position: relative;
+	.border-radius;
+	.prev,
+	.next{
+		float: left;
+		padding-top: 8px;
+		height: 24px;
+		overflow: hidden;
+		a{
+			padding: 8px;
+			background-color: #F3F3F3;
+			.linear-gradient(#FFF, #F3F3F3);
+			.border-radius;
+			border: 1px solid #AAA;
+			text-shadow: white 0 1px 0;
+			span{
+				color: #333;
+				font-weight: bold;
+			}
+			&:hover{
+				text-decoration: none;
+			}
+			z-index: 10;
+		}
+	}
+	.next{
+		float: right;
+	}
+	.page-num{
+		float: left;
+		margin-left: 40%;
+		margin-top: 5px;
+		color: #999;
+		font-size: 1.08333333333em;
+	}
+}
 
