@@ -21,6 +21,24 @@
         <link rel="stylesheet" href="assets/css/mobile.min.css" />
         </noscript>
         <script>
+            
+            function fnCallback(i, width) {
+                // Alias HTML tag.
+                var html = document.documentElement;
+                
+                // Find all instances of range_NUMBER and kill 'em.
+                html.className = html.className.replace(/(\s+)?range_\d/g, '');
+                
+                // Check for valid range.
+                if (i > -1) {
+                    // Add class="range_NUMBER"
+                    html.className += ' range_' + i;
+                }
+                
+                // Note: Not making use of width here, but I'm sure
+                // you could think of an interesting way to use it.
+            }
+            
             // Edit to suit your needs.
             var ADAPT_CONFIG = {
                 // Where is your CSS?
@@ -29,6 +47,7 @@
                 // false = Only run once, when page first loads.
                 // true = Change on window resize and page tilt.
                 dynamic: true,
+                callback: fnCallback,
                 
                 // First range entry is the minimum.
                 // Last range entry is the maximum.
@@ -91,7 +110,7 @@
 
         <script type="text/html" id="ad_template"><div class="story-item ad-river group <@=ad_id@>"><div class="story-item-gutters group"><div class="story-item-diggbtn"><div class="digg-btn has-tooltip<@=(ad_user_has_dugg ? " digg-dugg" : "")@>" data-id="<@=ad_id@>"><a href=<@=(!ad_meta.video_embed ? ad_server +  ad_click_url + "\"" : "#" )@> target="_blank" class="digg-count-wrapper <@ if (ad_meta.video_embed) { @> has-inline-video<@ } @>"><span class="digg-count"><span><@=ad_meta.diggs@></span></span></a><a class="digg-it digg-advert group <@=ad_user_has_dugg ?" digg-dugg\" href=\"" + ad_server + ad_click_url + "\"" : "\""@>></a></div></div><div class="story-item-content group"><div class="story-item-details"><h3 class="story-item-title"><a <@=(!ad_meta.video_embed ? "href=\"" + ad_server +  ad_click_url + "\"" : "" )@> target="_blank" class="story-title<@ if (ad_meta.video_embed) { @> has-inline-video<@ } @>"><@=ad_meta.title@></a>&nbsp;<span class="external-link-icon"></span></h3><p class="story-item-description"><a href="<@= ad_server +  ad_click_url @>" target="_blank" class="story-item-source"><@=ad_meta.display_url@></a><a <@=(!ad_meta.video_embed ? "href=\"" + ad_server +  ad_click_url + "\"" : "" )@> target="_blank" class="story-item-teaser <@ if (ad_meta.video_embed) { @> has-inline-video<@ } @>">&mdash; <@=ad_meta.description@></a></p></div><ul class="story-item-meta group"><li class="sponsored-by">Sponsored by <strong><@=ad_meta.sponsored_by@></strong></li><li class="story-item-bury"><a class="hide-link"><span class="storylist-icon bury dib"></span>Bury</a></li></ul></div><div class="story-item-media"><a <@=(!ad_meta.video_embed ? "href=\"" + ad_server +  ad_click_url + "\"" : "" )@> target="_blank" class="thumb thumb-s<@ if (ad_meta.video_embed) { @> has-inline-video<@ } @>"><@ if (ad_meta.video_embed) { @><div class="storylist-icon inline-video"></div><@ } @><img src="<@=ad_meta.thumbnail_url@>" alt="<@=ad_meta.title@>"></a></div><@ if (ad_meta.impression_url) { @><img src="<@=ad_meta.impression_url@>" class="ad-pixel"><@ } @></div><@ if (ad_meta.video_embed) { @><div class="story-item-inline-video-container" style="display:none"><div class="story-item-inline-video"><@=ad_meta.video_embed@></div></div><@ } @></div></script>
     <script type="text/javascript" charset="utf-8">DUI.ad_url_uprrail1 = 'http://ad.doubleclick.net/adj/dgg.ente/home_tn_uprrail1;pt=tn;media=all;kw=movie;kw=following;kw=80s;kw=better;kw=realized;kw=women;kw=page;kw=celebrate;kw=remake;kw=posted;kw=message;kw=somebody;kw=peter;kw=treks;kw=check;kw=produced;kw=producers;kw=asked;kw=does;kw=objectifying;kw=way;kw=dwarf;kw=bad;kw=afternoon;kw=frank;kw=entertainment;dv=v4;scat=ente;sync=yes;pos=uprrail1;sz=300x250,300x330,300x600;tile=1;ord=1315568302.9966';DUI.ad_url_lwrrail = 'http://ad.doubleclick.net/adj/dgg.ente/home_tn_lwrrail;pt=tn;media=all;kw=movie;kw=following;kw=80s;kw=better;kw=realized;kw=women;kw=page;kw=celebrate;kw=remake;kw=posted;kw=message;kw=somebody;kw=peter;kw=treks;kw=check;kw=produced;kw=producers;kw=asked;kw=does;kw=objectifying;kw=way;kw=dwarf;kw=bad;kw=afternoon;kw=frank;kw=entertainment;dv=v4;scat=ente;pos=lwrrail;sz=300x250,300x600;tile=2;ord=1315568302.9966';DUI.ad_url_siderailpromo1 = 'http://ad.doubleclick.net/adj/dgg.ente/home_tn_siderailpromo1;pt=tn;media=all;kw=movie;kw=following;kw=80s;kw=better;kw=realized;kw=women;kw=page;kw=celebrate;kw=remake;kw=posted;kw=message;kw=somebody;kw=peter;kw=treks;kw=check;kw=produced;kw=producers;kw=asked;kw=does;kw=objectifying;kw=way;kw=dwarf;kw=bad;kw=afternoon;kw=frank;kw=entertainment;dv=v4;scat=ente;pos=siderailpromo1;sz=300x75;tile=3;ord=1315568302.9966';DUI.ad_url_uprrail2 = 'http://ad.doubleclick.net/adj/dgg.ente/home_tn_uprrail2;pt=tn;media=all;kw=movie;kw=following;kw=80s;kw=better;kw=realized;kw=women;kw=page;kw=celebrate;kw=remake;kw=posted;kw=message;kw=somebody;kw=peter;kw=treks;kw=check;kw=produced;kw=producers;kw=asked;kw=does;kw=objectifying;kw=way;kw=dwarf;kw=bad;kw=afternoon;kw=frank;kw=entertainment;dv=v4;scat=ente;pos=uprrail2;sz=300x250,300x330,300x600;tile=4;ord=1315568302.9966';</script>
-
+  
 </head>
 
 <body class="chrome " id="two-col">
