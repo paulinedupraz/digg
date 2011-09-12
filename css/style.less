@@ -234,13 +234,13 @@ a:hover, a:active{
 			color: #105CB6;
 		}
 	}
-}
-
-.active-topic a{
-	padding: 5px 9px 7px 9px;
+	
+	.active-topic a{
+	padding: 5px 9px 6px 9px;
 	background-color: #E3E8F4;
 	border: 1px solid #CCDCEF;
 	.border-radius(15px);
+}
 }
 
 .section-header{
@@ -275,6 +275,7 @@ a:hover, a:active{
 }
 
 .main-content-columns{
+	position: relative;
 	margin-top: 20px;
 	.stories > div{
 		padding: 10px 0;
@@ -473,22 +474,20 @@ a:hover, a:active{
 	}
 }
 
-
-@media (max-width: 720px){
-	.footer{
-		margin-bottom: 70px;
+html.range_0 {
+	.new-feature-strip{
+		display: none;
 	}
-}
-
-@media (max-width: 480px){
 	
-	.new-feature-strip button{
-		margin-top: 5px;
+	.digg-logo{
+		position: absolute;
+		margin-left: 100px;
 	}
-
+	
 	.header-band .header-nav{
 		clear: both;
-		margin-left: 59px;
+		overflow: hidden;
+		padding-top: 8px;
 		a{
 			margin-bottom: 8px;
 		}
@@ -496,11 +495,26 @@ a:hover, a:active{
 	
 	.loggedout-navigation, 
 	form{
-		margin-left: 69px;
+		
 		margin-bottom: 5px;	
 	}
 	
 	form{
 		margin-top: 6px; 
 	}
+	
+	.uprrail1{
+		position: absolute;
+		top: 0;
+		margin-top: -230px;
+	}
+	
+	.main-column{
+		margin-top: 230px;
+	}
+	
+}
+
+html.range_0 .footer{
+	margin-bottom: 65px;
 }
