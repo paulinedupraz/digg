@@ -206,6 +206,7 @@ a:hover, a:active{
 	}
 }
 
+
 .main-content-band{
 	background: -webkit-gradient(linear,left top,left 35,from(#E5ECF3),to(white));
 	background: -moz-linear-gradient(top,#E5ECF3,white 35px);
@@ -255,10 +256,24 @@ a:hover, a:active{
 		}
 		
 		.dropdown-menu{
+			position: relative;
 			display: inline;
 			margin-left: 10px;
 			ul {
+				position: absolute;
 				display: none;
+				left: 0;
+				background: #fff;
+				width: 150px;
+				a{
+					display: block;
+					padding: 5px;
+					border: 1px solid #80A1C1;
+					border-top: none;
+				}
+			}
+			&:hover ul{
+				display: block;
 			}
 		}
 	}
