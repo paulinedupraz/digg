@@ -39,8 +39,6 @@ h3 a:active{
 
 h4{
 	color: #333;
-}
-h4{
 	font-size: 17px;
 }
 
@@ -280,16 +278,6 @@ a:hover, a:active{
 	.stories > div{
 		padding: 10px 0;
 		border-bottom: 1px solid #CCDCEF;
-		.story-item-teaser{
-			color: #666;
-			word-wrap: break-word;
-			&:hover{
-				text-decoration: none;
-			}
-			.timestamp{
-				color: #999;
-			}
-		}
 		.crawl4link {
 			display: none;
 		}
@@ -297,12 +285,30 @@ a:hover, a:active{
 
 }
 
-.story-item-content{
-	padding-right: 60px;
+.story-item{
+	position: relative;
 }
+
+.story-item-content{
+	padding-right: 70px;
+}
+
+.story-item-teaser{
+	color: #666;
+	word-wrap: break-word;
+	&:hover{
+		text-decoration: none;
+	}
+	.timestamp{
+		color: #999;
+	}
+}
+
 .story-item-media{
 	width: 56px;
-	float: right;
+	position: absolute;
+	right: 0;
+	top: 10px;
 	a{
 		display: block;
 		height: 48px;
@@ -336,25 +342,30 @@ a:hover, a:active{
 		font-weight: bold;
 		color: #716B14;
 	}
-	.digg-it{
-		margin-left: 4px;
-		display: block;
-		width: 46px;
-		height: 24px;
-		background-image: url('../images/story_items.png');
-		background-position: 46px -26px;	
-	}
+}
+
+.digg-it{
+	margin-left: 4px;
+	display: block;
+	width: 46px;
+	height: 24px;
+	background-image: url('../images/story_items.png');
+	background-position: 46px -26px;	
 }
 
 .side-column{	
 	li.group{
 		border-bottom: 1px solid #CDDEF0;
 		padding: 5px 40px 5px 0;
+		min-height: 50px;
 	}
 	
 	img{
 		width: 30px;
 		height: 30px;
+	}
+	> div{
+		margin-bottom: 20px;
 	}
 }
 
